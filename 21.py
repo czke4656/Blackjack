@@ -14,3 +14,15 @@ if jatekmod == 1:
         print("Vesztettél!")
     elif jatekos == robot:
         print("Döntetlen!")
+elif jatekmod == 2:
+    print("Játékosok száma kettő")
+    jatekos1 = random.randint(2, 11) + random.randint(2, 11)
+    jatekos2 = random.randint(2, 11) + random.randint(2, 11)
+    print(f"Első játékos kártyái: {jatekos1}")
+    print(f"Második játékos kártyái: {jatekos2}")
+    if jatekos1 > jatekos2 and jatekos1 <= 21 or jatekos2 > 21:
+        print("Első játékos nyert!")
+    elif jatekos2 > jatekos1 and jatekos2 <= 21 or jatekos1 > 21:
+        print("Második játékos nyert!")
+    elif jatekos1 == jatekos2:
+        print("Döntetlen!")
